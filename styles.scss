@@ -1,0 +1,174 @@
+
+* {
+	box-sizing: border-box;
+}
+:root {
+	font-family: sans-serif;
+}
+@mixin dark-background {
+	background-color: #1F2937;
+}
+@mixin header-main {
+	font-size: 48px;
+	font-weight: extra-bold;
+	color: #F9FAF8;
+}
+@mixin header-secondary {
+	font-size: 18px;
+	color: #E5E7EB;
+}
+@mixin button {
+	background-color: #3882F6;
+	font-size: 1em;
+	font-weight: bold;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	padding: 5px 25px;
+}
+@mixin info-header {
+	font-size: 36px;
+	font-weight: extra-bold;
+	color: #1F2937;
+}
+@mixin quote-background {
+	background-color: #E5E7EB;
+}
+@mixin quote-text {
+	font-size: 36px;
+	font-weight: lighter;
+	font-style: italic;
+	color: #1F2937;
+}
+nav {
+	display: flex;
+	align-items: center;
+}
+#header-logo-container {
+	flex: auto;
+	margin: 15px 0 5px 0;
+}
+#header-logo {
+	width: 3.5rem;
+}
+.header-link {
+	display: inline-block;
+	flex: initial;
+	@include header-secondary;
+	text-decoration: none;
+	margin: 0 10px;
+}
+header {
+	padding: 0 100px 75px 100px;
+	@include dark-background
+}
+header h1 {
+	@include header-main;
+	margin-top: 0;
+}
+header p {
+	@include header-secondary;
+}
+#outer-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 60px;
+}
+#outer-header > *{
+	flex: 1;
+	max-width: 500px;
+	margin: 0 20px;
+}
+#img-placeholder {
+	background-color: grey;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include header-secondary;
+}
+#img-placeholder > span {
+	display: inline-block;
+	margin: 30px;
+	text-align: center;
+}
+header .sign-up-button {
+	@include button;
+}
+#information-section {
+	text-align: center;
+	margin-bottom: 80px;
+}
+#information-section > h2 {
+	@include info-header;
+}
+#information-flexbox {
+	display: flex;
+	justify-content: center;
+}
+#information-flexbox > div {
+	display: inline-block;
+}
+#information-flexbox figure {
+	width: 150px;
+	min-width: 150px;
+}
+.information-image {
+	height: 150px;
+	border: 5px solid #3882F6;
+	border-radius: 10px;
+}
+#quote-section {
+	@include quote-background;
+	display: flex;
+	padding: 80px 150px;
+	flex-direction: column;
+	justify-content: center;
+}
+#quote {
+	@include quote-text;
+	font-weight: 100;
+}
+#quote-author {
+	font-weight: bold;
+	text-align: right;
+	padding-right: 100px;
+	font-size: 1.3em;
+}
+#info-section {
+
+}
+#info {
+	margin: 60px 100px;
+	padding: 25px 40px;
+	background-color: #3882F6;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	border-radius: 5px;
+}
+#info h3 {
+	font-size: 1.3em;
+	margin-bottom: 0;
+}
+#info p {
+	@include header-secondary;
+	margin-top: 0;
+}
+#info-section .sign-up-button {
+	@include button;
+	border: 3px solid white;
+}
+.button-container {
+	display: grid;
+	align-content: center;
+}
+footer {
+	@include dark-background;	
+	@include header-secondary;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
